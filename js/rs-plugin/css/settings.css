@@ -1158,7 +1158,7 @@ website:   	http://www.themepunch.com
     clear: both;
 }
 
-.tp-bullets {
+.tp-bullets, .tp-playToggle {
     z-index: 1000;
     position: absolute;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -1178,7 +1178,26 @@ website:   	http://www.themepunch.com
     -khtml-opacity: 0;
     opacity: 0;
 }
-
+.tp-playToggle{
+  bottom: 20px;
+  left:100%;
+  margin-left: -26px;
+  cursor:pointer;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+   -moz-opacity: 0.8;
+   -khtml-opacity: 0.8;
+   opacity: 0.8;
+ }
+ .tp-playToggle:hover{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+ transition: opacity 1s;
+ }
+ .tp-playToggle .fa{
+ color:#fff;
+ }
 .tp-bullets.simplebullets.navbar {
     border: 1px solid #666;
     border-bottom: 1px solid #444;

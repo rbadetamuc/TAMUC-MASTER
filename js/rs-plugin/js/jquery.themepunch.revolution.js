@@ -92,7 +92,7 @@
 
 
 
-
+					
 					return this.each(function() {
 
 						var opt=options;
@@ -102,7 +102,12 @@
 						if (opt.fullWidth!="on" && opt.fullScreen!="on") forceFulWidth="off";
 
 						var container=jQuery(this);
-
+						
+						if(opt.onHoverStop == "on"){
+							container.append('<div class="tp-playToggle"><i class="fa fa-pause fa-play"></i></div>');
+							
+						}
+						
 						if (opt.fullWidth=="on" && opt.autoHeight=="off")
 							container.css({maxHeight:opt.startheight+"px"});
 
@@ -297,7 +302,9 @@
 									// BASIC OFFSET POSITIONS OF THE BULLETS
 									if (opt.navigationHOffset==undefined) opt.navOffsetHorizontal=0;
 									if (opt.navigationVOffset==undefined) opt.navOffsetVertical=0;
-
+									
+									
+											
 
 									container.append('<div class="tp-loader"></div>');
 
@@ -864,7 +871,7 @@
 		//	-	CREATE THE BULLETS -  //
 		////////////////////////////////
 		function createBullets(container,opt) {
-
+			
 			if (opt.navigationType=="bullet"  || opt.navigationType=="both") {
 						container.parent().append('<div class="tp-bullets simplebullets '+opt.navigationStyle+'"></div>');
 			}
@@ -4797,12 +4804,10 @@
 						}
 					},100);
 
-
-					container.hover(
-						function() {
-
+					var PlayBtn = container.find('.tp-playToggle .fa');
+					PlayBtn.click(function() {
 							if (opt.onHoverStop=="on") {
-									opt.conthover=1;
+								opt.conthover=1;
 								bt.stop();
 								container.trigger('revolution.slide.onpause');
 								var nextsh = container.find('>ul >li:eq('+opt.next+') .slotholder');
@@ -4812,9 +4817,10 @@
 									   dimg.data('kenburn').pause();
 								});
 							}
-						},
-						function() {
-							if (container.data('conthover')!=1) {
+							PlayBtn.toggleClass('fa-pause');
+						//},							
+						//function() {
+							if (container.data('conthover')!=1 && PlayBtn.hasClass('fa-pause')) {
 								container.trigger('revolution.slide.onresume');
 								opt.conthover=0;
 								if (opt.onHoverStop=="on" && opt.videoplaying!=true) {
@@ -4826,7 +4832,7 @@
 									if (dimg.data('kenburn')!=undefined)
 									   dimg.data('kenburn').play();
 								});
-							}
+							} 
 						});
 			}
 		}

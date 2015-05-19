@@ -223,7 +223,7 @@ jQuery(function ($) {
                     args.navigationArrows = "nexttobullets";
                 }
                 if (slider.hasClass('j-arr-hide')) {
-                    args.navigationArrows = "none";
+                    args.navigationArrows = "none";					
                 }
                 if (slider.hasClass('b-video-slider')) {
                     args.navigationVOffset = 153;

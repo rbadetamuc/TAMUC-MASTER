@@ -25,18 +25,37 @@ jQuery(document).ready(function($) {
 			$('.b-carousel-primary__item').show();
 		}
 	});
+		$(window).scroll(function(){
+
+		if ($(this).scrollTop()+$("#scrollObj").height() < $("#scrollObj").offset().top-100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+	$(".scrollToTop").click(function(e) {
+		e.preventDefault();
+    	$('html, body').animate({
+        scrollTop: $("#scrollObj").offset().top
+    }, 2000);
+});
 });
 function checkSize(){
-	if ($(window).width() < BREAK.LG) {
+	if ($(window).width() < BREAK.SM) {
+		$('.Parentscroll').show();
 		$('.foot-widget-area').hide();
+		$('.foot-widget-title .fa').show();
 	 // Mobile stuff.
 	$('.foot-widget-title').on( "click", function(e) {
 		e.preventDefault();
 		$(this).next().slideToggle();
 		$(this).find('.fa').ToggleClass('');
 	});
-	}else{
-		$('.foot-widget-title').off( "click");
+	}if ($(window).width() > BREAK.SM) {
+		$('.Parentscroll').hide();
 		$('.foot-widget-area').show();
+		$('.foot-widget-title .fa').hide();
+		$('.foot-widget-title').off( "click");
 	}
+	
 }
