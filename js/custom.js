@@ -39,6 +39,12 @@ jQuery(document).ready(function($) {
         scrollTop: $("#scrollObj").offset().top
     }, 2000);
 });
+{
+		$(".widget_nav_title").on('click',function(){
+			if($(window).width() < BREAK.MD)
+			$(".widget_nav_menu .menu_container").slideToggle();
+		});
+	}
 });
 function checkSize(){
 	if ($(window).width() < BREAK.SM) {
@@ -51,6 +57,7 @@ function checkSize(){
 		$(this).next().slideToggle();
 		$(this).find('.fa').ToggleClass('');
 	});
+
 	}if ($(window).width() > BREAK.SM) {
 		$('.Parentscroll').hide();
 		$('.foot-widget-area').show();
