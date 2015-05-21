@@ -14755,7 +14755,7 @@ width:100%;
 	height:50px;
 	display:inline-block;
 	position:relative;
-	top:3px;
+	top:7px;
 }
 .featureContactSeperator {
 	border-left:1px solid #003976;
@@ -14914,7 +14914,7 @@ color:#edb111;
 background-color: rgba(17, 118, 237, 0.5); 
 }
 .b-top-nav-big .b-top-nav__dropdomn{
-box-shadow:0px 5px 60px rgba(0,0,0,0.5);
+box-shadow:0px 20px 30px rgba(0,0,0,0.3);
 margin-top:2px;
 }
 .f-news-item__info_title a:hover{
@@ -15006,7 +15006,8 @@ font-size:2em;
 
 }
 .myLeoLink {
-width:110px;
+width:100px;
+top:8px
 }
 .featureContactSeperator{
 padding-top:6px;
@@ -15049,7 +15050,7 @@ display:block;
 width:100%;
 }
 .myLeoLink{
-top:-10px;
+top:-5px;
 vertical-align:top;
 }
 .featureContactVerticalSeperator{
@@ -15116,8 +15117,8 @@ opacity:1;
   border-color: transparent transparent #AFCADA transparent;
 }
 .b-top-nav__1level a.active .b-ico-dropdown{
-	border-color: transparent transparent #D8A801 transparent;
-	display:block;
+border-color: transparent transparent #FBBB00 transparent;
+display:block;
 }
 /* End New Change 05/06 */
 .b-top-nav-big .b-top-nav__2level_wrap{
