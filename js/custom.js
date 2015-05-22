@@ -23,7 +23,9 @@ jQuery(document).ready(function($) {
 		if(slider){
 			$('.loadingrss').hide();
 			$('.b-carousel-primary__item').show();
+			$('.jotform-form').removeClass('hidden');
 		}
+		
 	});
 		$(window).scroll(function(){
 
