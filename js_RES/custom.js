@@ -46,19 +46,19 @@ jQuery(document).ready(function($) {
 function checkSize(){
 	if ($(window).width() < BREAK.SM) {
 		$('.Parentscroll').show();
-		$('.foot-widget-area').hide();
-		$('.foot-widget-title .fa').show();
+		//$('.foot-widget-area').hide();
+		//$('.foot-widget-title .fa').show();
 	 // Mobile stuff.
-	$('.foot-widget-title').on( "click", function(e) {
+	/* $('.foot-widget-title').on( "click", function(e) {
 		e.preventDefault();
 		$(this).next().slideToggle();
 		$(this).find('.fa').ToggleClass('');
-	});
+	}); */
 	}if ($(window).width() > BREAK.SM) {
 		$('.Parentscroll').hide();
-		$('.foot-widget-area').show();
-		$('.foot-widget-title .fa').hide();
-		$('.foot-widget-title').off( "click");
+		// $('.foot-widget-area').show();
+		// $('.foot-widget-title .fa').hide();
+		// $('.foot-widget-title').off( "click");
 	}
 	
 }

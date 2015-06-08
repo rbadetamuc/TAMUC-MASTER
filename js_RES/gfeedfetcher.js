@@ -4,7 +4,7 @@
 // Updated June 14th, 10': Fixed issue in IE where labels would sometimes be associated with the incorrect feed items
 // -------------------------------------------------------------------
 
-var gfeedfetcher_loading_image="js/bxslider/images/bx_loader.gif" //Full URL to "loading" image. No need to config after this line!!
+var gfeedfetcher_loading_image="js_RES/bxslider/images/bx_loader.gif" //Full URL to "loading" image. No need to config after this line!!
 
 google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
 
@@ -147,7 +147,8 @@ gfeedfetcher.prototype._displayresult=function(feeds){
 	rssoutput += '<div class="b-news-item__info_title f-news-item__info_title f-primary-b">'+titleTag+'</div>'
 	rssoutput += '<div class="b-news-item__info_additional"> <span class="f-news-item__info_additional_item b-news-item__info_additional_item"> <i class="fa fa-calendar-o"></i> '+ itemdate +' </span> </div>'
 	rssoutput += '<div class="b-news-item__info_text f-news-item__info_text">' + itemdescription + '</div>'
-	rssoutput += '<a class="f-news-item__info_more f-more f-secondary-b" href="'+ itemlink +'" >Read more <i class="fa fa-chevron-circle-right"></i></a> </div>'
+	//rssoutput += '<a class="f-news-item__info_more f-more f-secondary-b" href="'+ itemlink +'" >Read more <i class="fa fa-chevron-circle-right"></i></a> </div>'
+	rssoutput += '</div>'
 	rssoutput += ' </div></div>'
 	rssoutput+=(this.itemcontainer=="<li>")? "</ul>" : ""
 	

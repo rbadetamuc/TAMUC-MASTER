@@ -682,7 +682,7 @@ body .b-hidden {
 }
 .b-btn-primary:hover {
 	background: #083752;
-	border-bottom: 1px solid #083752;
+	
 }
 .b-btn-light {
 	-moz-border-radius: 2px;
@@ -14709,12 +14709,15 @@ background:none;
 background-color:#00304c;
 }
 .b-btn-primary{
-background-color:#edb111;
+background-color:#fff;
+padding-bottom: 10px;
 border:none;
+border-bottom: 1px solid transparent; /* DAF - added to stop the resizing on hover */
 box-shadow: none;
 }
 .b-btn-primary:hover{
-background-color:#edb111;
+background-color: #FFD000;
+color: #FFFFFF;
 }
 .b-info-container__text a{
 color:#fff;
@@ -14747,7 +14750,7 @@ width:100%;
 	color:#fff;
 	display:table-cell;
 }
-.applyLink:hover, .visitLink:hover, .watchLink:hover, .giveLink:hover,.phoneNumberLink:hover, .myLeo:hover{
+.applyLink:hover, .visitLink:hover, .giveLink:hover,.phoneNumberLink:hover, .myLeo:hover{
 color:#FBBB00;
 }
 
@@ -15018,7 +15021,8 @@ margin:0px 5px;
 .addressLink, .systemsLink{
 display:block;
 float:none;
-}
+} 
+/*  Footer Collapse menu hidden
 .footer-widget .footer-drop {
  display:inline;
 }
@@ -15027,7 +15031,7 @@ float:none;
 }
 .footer-widget .foot-widget-title{
 cursor:pointer;
-}
+}*/
 #featureContact{
 max-width:600px;
 margin:auto;
@@ -15160,4 +15164,4 @@ top:10px;
 }
 }
 /* This is to add ada compliant link discriptions.  Just add as span class aroud the words you don't want to appear. */
-.b-employee-item a span { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+a span.adahide { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
