@@ -41,6 +41,7 @@ jQuery(document).ready(function($) {
         scrollTop: $("#scrollObj").offset().top
     }, 2000);
 });
+
 });
 function checkSize(){
 	if ($(window).width() < BREAK.SM) {
