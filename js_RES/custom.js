@@ -11,6 +11,14 @@ jQuery(document).ready(function($) {
 			$(target).focus();
 		}
 	});
+	/* $( "#requestForm" ).load( "RequestForm.html",function( response, status ) {
+		if ( status) {
+			$('#requestForm').removeClass('hidden');
+	}else{
+		var msg = "Sorry! error loading Request Form. Try reload page";
+			alert(msg);
+	}
+	});  */
 	var gfeedfetcher_loading_image="js/bxslider/images/bx_loader.gif" 
 	$( window ).load(function() {	
 		var slider = $('.j-carousel-rss').bxSlider({
@@ -22,8 +30,8 @@ jQuery(document).ready(function($) {
 		});
 		if(slider){
 			$('.loadingrss').hide();
-			$('.b-carousel-primary__item').show();
-			$('.jotform-form').removeClass('hidden');
+			$('.b-carousel-primary__item').show();	
+			$( "#requestForm" ).load( "RequestForm.html");
 		}
 		
 	});
@@ -61,4 +69,12 @@ function checkSize(){
 		// $('.foot-widget-title').off( "click");
 	}
 	
+}
+function reloadScript()
+{
+    if( event.persisted )
+    {
+          window.location.reload();
+    }
+ 
 }

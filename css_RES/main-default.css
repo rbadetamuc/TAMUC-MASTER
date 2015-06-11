@@ -14749,14 +14749,18 @@ width:100%;
 	text-decoration:none;
 	color:#fff;
 	display:table-cell;
+	padding:0px 15px;
 }
-.applyLink:hover, .visitLink:hover, .giveLink:hover,.phoneNumberLink:hover, .myLeo:hover{
+.applyLink{
+padding-left:0px;
+}
+.applyLink:hover, .visitLink:hover,.watchLink:hover, .giveLink:hover,.phoneNumberLink:hover, .myLeo:hover{
 color:#FBBB00;
 }
 
 .myLeoLink{
-	width:145px;
-	height:50px;
+	width:150px;
+	height:64px;
 	display:inline-block;
 	position:relative;
 	top:2px;
@@ -14978,6 +14982,10 @@ display:none;
 @media screen and (max-width: 1100px){
 .applyLink, .visitLink, .watchLink, .phoneNumberLink, .giveLink, .myLeo{
 font-size:3em;
+padding:0px 10px;
+}
+.applyLink{
+padding-left:0px;
 }
 .featureContactSeperator{
 padding-top:10px;
@@ -14987,9 +14995,23 @@ max-width:900px;
 margin:auto;
 }
 }
+@media screen and (max-width: 1100px){
+.myLeoLink{
+top:5px;
+height:55px;
+}
+}
 @media screen and (max-width: 990px){
 .applyLink, .visitLink, .watchLink, .phoneNumberLink, .giveLink, .myLeo{
 font-size:2.4em;
+padding:0px 10px;
+}
+.applyLink{
+padding-left:0px;
+}
+.myLeoLink{
+	width:130px;
+	height:44px;
 }
 .featureContactSeperator{
 padding-top:10px;
@@ -15008,11 +15030,13 @@ margin:auto;
 }
 .applyLink, .visitLink, .watchLink, .phoneNumberLink, .giveLink, .myLeo{
 font-size:2em;
-
+padding:0px;
 }
+
 .myLeoLink {
 width:100px;
-top:8px
+top:4px;
+height:40px;
 }
 .featureContactSeperator{
 padding-top:6px;
@@ -15056,8 +15080,10 @@ display:block;
 width:100%;
 }
 .myLeoLink{
-top:-5px;
+top:-2px;
 vertical-align:top;
+width:95px;
+height:50px;
 }
 .featureContactVerticalSeperator{
 position:relative;
@@ -15153,14 +15179,10 @@ top:inherit;
 }
 /* End New Change 05/06 */
 }
-@media screen and (min-width: 1025px){
-.myLeoLink{
-top:5px;
-}
-}
+
 @media screen and (min-width: 1100px){
 .myLeoLink{
-top:10px;
+top:8px;
 }
 }
 /* This is to add ada compliant link discriptions.  Just add as span class aroud the words you don't want to appear. */

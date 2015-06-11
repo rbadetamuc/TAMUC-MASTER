@@ -47,12 +47,15 @@
 		<script src="js_RES/gfeedfetcher.js"></script> 
 <!-- RSS -->
 
-<link type="text/css" rel='stylesheet' href="fonts/fonts.css">
-<link type="text/css" data-themecolor="default" rel='stylesheet' href="css_RES/main-default.css">
-<link type="text/css" rel='stylesheet' href="js_RES/rs-plugin/css/settings.css">
-<link type="text/css" rel='stylesheet' href="js_RES/rs-plugin/css/settings-custom.css">
 
-<script src="js_RES/jquery/jquery-1.11.1.min.js"></script> 
+<!-- Crazy Egg -->
+<script type="text/javascript"> 
+setTimeout(function(){var a=document.createElement("script"); 
+var b=document.getElementsByTagName("script")[0]; 
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/9584.js?"+Math.floor(new Date().getTime()/3600000); 
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1); 
+</script>
+
 
 <script src="js_RES/modules/modernizr.js"></script>
 
@@ -66,13 +69,7 @@
   _st('install','B3W1USgH8yp9n_hADxia','2.0.0');
 // ]]></script>
 
-<!-- Crazy Egg -->
-<script type="text/javascript"> 
-setTimeout(function(){var a=document.createElement("script"); 
-var b=document.getElementsByTagName("script")[0]; 
-a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/9584.js?"+Math.floor(new Date().getTime()/3600000); 
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1); 
-</script>
+
 <!-- Begin ALERT --><!-- End ALERT -->
 <!-- Begin EXTRA-HEADER-CODE --><meta content="5f23f709225bbc543f213f55774dd616" name="p:domain_verify" />
 
@@ -155,6 +152,11 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
 <noscript>
 <iframe frameborder="0" height="1" src="http://4478838.fls.doubleclick.net/activityi;src=4478838;type=TAMUt0;cat=TAMUR0;ord=1?" style="display:none" width="1" ></iframe>
 </noscript>
+
+<link type="text/css" rel='stylesheet' href="fonts/fonts.css">
+<link type="text/css" data-themecolor="default" rel='stylesheet' href="css_RES/main-default.css">
+<link type="text/css" rel='stylesheet' href="js_RES/rs-plugin/css/settings.css">
+<link type="text/css" rel='stylesheet' href="js_RES/rs-plugin/css/settings-custom.css">
 
 <!-- Skip Navigation-->
 <style>
@@ -449,8 +451,26 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
       </nav>
     </div>
   </div>
+  <script type="text/javascript">
+       jQuery(document).ready(function()
+        {
+                var d = new Date();
+                d = d.getTime();
+                if (jQuery('#reloadValue').val().length == 0)
+                {
+                        jQuery('#reloadValue').val(d);
+                        jQuery('body').show();
+                }
+                else
+                {
+                        jQuery('#reloadValue').val('');
+                        location.reload();
+                }
+        });
+   </script>
   
 </header>
+<input id="reloadValue" type="hidden" name="reloadValue" value="" />
 <div class="j-menu-container"></div>
 <div class="l-main-container"> 
   <!--Start Copy Here MARKET EDITS-->
@@ -625,24 +645,14 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
 </div>
 </div>
 </section>
-<!-- <section class="b-bg-block f-bg-block person b-bg-block-girl parallax-section-bg" data-type="background" data-speed="300" style="background-position: 50% -3.74px;">
+<section class="b-bg-block f-bg-block person b-bg-block-girl parallax-section-bg" data-type="background" data-speed="300" style="background-position: 50% -3.74px;">
 <div class="container f-center">
 <h1 class="f-primary-b">GET STARTED TODAY.</h1>
 <a class="b-btn f-btn b-btn-md f-btn-md b-btn-primary f-primary-sb j-data-element animated undefined" style="margin-bottom: 80px; margin-top: 20px;" href="http://www.tamuc.edu/aboutUs/generalinfo.aspx"><i class="fa fa-info-circle"></i> Request Information</a>
 </div>
 
-</section> -->
-<section class="b-bg-block f-bg-block b-bg-block-education" id="scrollObj">
-
-  <div class="container f-center">
-    <h1 class="f-secondary-b">Get Started today.</h1>
-    <div class="b-bg-block__desc f-bg-block__desc f-secondary"> <u>Request Information </u> </div>
-	<div id="requestForm" class="hidden"> </div>
-  </div>
-
-  </section>
-
-  <section class="b-infoblock b-diagonal-line-bg-light f-secondary">
+</section>
+<section class="b-infoblock b-diagonal-line-bg-light f-secondary">
   <div class="container">
     <h2 class="f-center f-secondary-l">what's <strong class="f-secondary-b">news</strong> at <strong>A&amp;M-Commerce</strong></h2>
     <p class="b-infoblock-description f-desc-section f-center f-employee__desc f-small">Read the latest stories from <strong><a style="color: #233382;
@@ -750,6 +760,7 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
 
 
 <script src="js_RES/breakpoints.js"></script> 
+<script src="js_RES/jquery/jquery-1.11.1.min.js"></script> 
 <!-- bootstrap --> 
 <script src="js_RES/scrollspy.js"></script> 
 <script src="js_RES/bootstrap-progressbar/bootstrap-progressbar.js"></script> 
@@ -809,7 +820,5 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
 <script src="js_RES/scrollIt/scrollIt.min.js"></script> 
 <script src="js_RES/modules/navigation-slide.js"></script> 
 <script src="js_RES/custom.js"></script>
-
-
 </body>
 </html>
