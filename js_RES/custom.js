@@ -48,8 +48,14 @@ jQuery(document).ready(function($) {
     	$('html, body').animate({
         scrollTop: $("#scrollObj").offset().top
     }, 2000);
-});
+	
 
+});
+	$(".myLeoLink").hover(function(){
+		$(this).find('img').attr('src','img/myLEO-over.svg');
+	},function(){
+		$(this).find('img').attr('src','img/myLEO.svg');		
+	});
 });
 function checkSize(){
 	if ($(window).width() < BREAK.SM) {
