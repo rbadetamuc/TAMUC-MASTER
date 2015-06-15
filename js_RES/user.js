@@ -794,8 +794,8 @@ jQuery(function ($) {
             if ($(window).width() > BREAK.LG) {
 					self.menuTop.click(function (e) {
 						var target = this;
-						if($(target).attr("href")== "" || $(target).attr("href")== "#" || $(target).attr("href") == " "){
-						e.preventDefault();	
+						if($(target).hasClass("b-top-nodropdown") == false){
+							e.preventDefault();	
 						}						
 					if($(this).next().is(':hidden')){	
 						self.menuTop.removeClass('active');

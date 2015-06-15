@@ -64,7 +64,9 @@ html {
   -ms-text-size-adjust: 100%;
 	/* 2 */
   -webkit-text-size-adjust: 100%;
-/* 2 */ }
+/* 2 */ 
+}
+
 body {
 	margin: 0;
 	font-family: "din", sans-serif;
@@ -3388,6 +3390,9 @@ header.animated .b-ico-dropdown {
 } */
 .b-top-nav__dropdomn {
 	display: none;
+	/* padding-left: 20px; */
+}
+.b-top-nav__dropdomn .b-navlevel__block{
 	padding-left: 20px;
 }
  @media screen and (min-width: 1025px) {
@@ -3398,10 +3403,13 @@ header.animated .b-ico-dropdown {
  left: 50%;
  margin-left: -116px;
  width: auto;
- padding: 19px 15px 5px;
+ /* padding: 19px 15px 5px; */
  background: white;
  box-shadow: 0 1px 1px #e3e3e3;
  z-index: 100;
+}
+.b-top-nav__dropdomn .b-navlevel__block{
+	padding: 19px 15px 5px; 
 }
  .b-top-nav__dropdomn:before {
  content: '';
@@ -14809,7 +14817,7 @@ color:#FBBB00;
 	text-decoration:none;
 	color:#afc7d6;
 	text-transform:uppercase;
-	font-size:0.9em;
+	font-size:1em;
 	line-height:2em;
 }
 .footer-widget ul li a:hover {
@@ -14866,7 +14874,7 @@ color:#FBBB00;
 	text-decoration:none;
 	color:#afc7d6;
 	text-transform:uppercase;
-	font-size:0.9em;
+	font-size:1em;
 	line-height:2em;
 }
 .footer-widget ul li a:hover {
@@ -14877,6 +14885,7 @@ color:#FBBB00;
 }
 .footer-widget ul li .fa {
 	margin-right:5px;
+	font-size:1.45em;
 }
 .footer-widget .footer-drop {
 	display:none;
@@ -14892,7 +14901,8 @@ color:#FBBB00;
 }
 
 .b-top-nav__1level>a{
-color:#AFCADA
+color:#AFCADA;
+cursor:pointer;
 }
 header.animated .b-ico-dropdown{
 top:39px;
@@ -15187,3 +15197,63 @@ top:8px;
 }
 /* This is to add ada compliant link discriptions.  Just add as span class aroud the words you don't want to appear. */
 a span.adahide { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+/* Main Drop Down Link */
+.b-top-nav__link > a{
+display:block;
+width:100%;
+padding:12px 20px;
+font-size:1.4em;
+text-transform:uppercase;
+text-align:center;
+color:#BBE5FD;
+font-weight:900;
+background-color:#03314B;
+}
+.f-top-nav__2level_title a:hover{
+color: #00314c; 
+}
+/* Form Place holder text darker */
+::-webkit-input-placeholder {
+   color: #666;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #666;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #666;
+}
+:-ms-input-placeholder {  
+   color: #666;
+}
+/* Swipe type Customization */
+
+.st-ui-type-heading{
+  font-size:1.1em !important;
+  line-height:1.6em !important;
+}
+.st-ui-type-detail {
+  font-size:0.9em !important;
+}
+
+/* No Background Image on mobile */
+.html-bg{
+	background-image:url(../img/overlay.png), url(../img/background.jpg) ;
+	background-position:0px 0px, center center;
+	background-size:auto , cover;
+	background-repeat:repeat, no-repeat;
+	opacity:0.25,1;
+}
+.b-pridestories{
+	color: #233382;
+	background-color: rgb(255, 211, 0);
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+}
+@media screen and (max-width: 768px){
+.html-bg{
+background-image:none;
+
+}
+}

@@ -130,7 +130,8 @@ gfeedfetcher.prototype._displayresult=function(feeds){
 		var itemdescription=/description/i.test(this.showoptions)? feeds[i].content : /snippet/i.test(this.showoptions)? feeds[i].contentSnippet  : ""
 		//rssoutput+=this.itemcontainer + itemtitle + " " + itemlabel + " " + itemdate + "\n" + itemdescription + "<br>" + itemreadmore  + this.itemcontainer.replace("<", "</") + "\n\n"
 		var imgsrc = gfeedfetcher.prototype._formatImage(feeds[i].content)
-		var titleTag = '<a title="'+ itemtitle + '" href="'+ itemlink +'" >'+ itemtitle + ' </a>'
+		//var titleTag = '<a title="'+ itemtitle + '" href="'+ itemlink +'" >'+ itemtitle + ' </a>'
+		var titleTag = itemtitle;
 		var imgTag
 		if(imgsrc){
 			imgTag = '<img data-retina="" src="'+ imgsrc +'"  alt="'+itemtitle +'" />';
@@ -139,6 +140,7 @@ gfeedfetcher.prototype._displayresult=function(feeds){
 		}
 	rssoutput += '<div class="b-carousel-primary__item ">'
 	rssoutput += '<div class="b-news-item f-news-item">'
+	/*
 	rssoutput += '<div class="hidden-xs b-news-item__img view view-sixth"> '+imgTag
 	rssoutput += '<div class="b-item-hover-action f-center mask"><div class="b-item-hover-action__inner">'
 	rssoutput += '<div class="b-item-hover-action__inner-btn_group"> <a href="'+ itemlink +'" class="b-btn f-btn b-btn-light f-btn-light info" ><i class="fa fa-link"></i></a> </div>'
@@ -149,9 +151,22 @@ gfeedfetcher.prototype._displayresult=function(feeds){
 	rssoutput += '<div class="b-news-item__info_text f-news-item__info_text">' + itemdescription + '</div>'
 	//rssoutput += '<a class="f-news-item__info_more f-more f-secondary-b" href="'+ itemlink +'" >Read more <i class="fa fa-chevron-circle-right"></i></a> </div>'
 	rssoutput += '</div>'
+	*/
+	rssoutput += '<a href="'+ itemlink +'">'
+	rssoutput += '<div class="hidden-xs b-news-item__img view view-sixth"> '+imgTag
+	rssoutput += '<div class="b-item-hover-action f-center mask"><div class="b-item-hover-action__inner">'
+	rssoutput += '<div class="b-item-hover-action__inner-btn_group"> <span class="b-btn f-btn b-btn-light f-btn-light info" ><i class="fa fa-link"></i></span> </div>'
+	rssoutput += '</div> </div> </div>'
+	rssoutput += '<div class="b-news-item__info">'
+	rssoutput += '<div class="b-news-item__info_title f-news-item__info_title f-primary-b">'+titleTag+'</div>'
+	rssoutput += '<div class="b-news-item__info_additional"> <span class="f-news-item__info_additional_item b-news-item__info_additional_item"> <i class="fa fa-calendar-o"></i> '+ itemdate +' </span> </div>'
+	rssoutput += '<div class="b-news-item__info_text f-news-item__info_text">' + itemdescription + '</div>'
+	//rssoutput += '<a class="f-news-item__info_more f-more f-secondary-b" href="'+ itemlink +'" >Read more <i class="fa fa-chevron-circle-right"></i></a> </div>'
+	rssoutput += '<span class="f-news-item__info_more f-more f-secondary-b" href="'+ itemlink +'" >Read more <i class="fa fa-chevron-circle-right"></i></span>' 
+	rssoutput += '</div>'
+	rssoutput += '</a>'
 	rssoutput += ' </div></div>'
 	rssoutput+=(this.itemcontainer=="<li>")? "</ul>" : ""
-	
 	}
 		//rssoutput = rssoutput + "<div id='endoffeed'></div>"
 		this.feedcontainer.innerHTML +=rssoutput + "<div id='endoffeed'></div>"			
