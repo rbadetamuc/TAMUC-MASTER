@@ -14815,7 +14815,6 @@ color:#FBBB00;
 .footer-widget ul li a, .footer-widget ul li {
 	text-decoration:none;
 	color:#afc7d6;
-	text-transform:uppercase;
 	font-size:1em;
 	line-height:2em;
 }
@@ -14872,7 +14871,6 @@ color:#FBBB00;
 .footer-widget ul li a, .footer-widget ul li {
 	text-decoration:none;
 	color:#afc7d6;
-	text-transform:uppercase;
 	font-size:1em;
 	line-height:2em;
 }
@@ -15205,9 +15203,9 @@ padding:12px 20px;
 font-size:1.4em;
 text-transform:uppercase;
 text-align:center;
-color:#BBE5FD;
+color:#03314B;
 font-weight:900;
-background-color:#03314B;
+background-color:#FBBB00;
 }
 .f-top-nav__2level_title a:hover{
 color: #00314c; 
