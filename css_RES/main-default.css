@@ -2919,7 +2919,12 @@ header {
 	position: relative;
 	z-index: 2;
 }
-.b-search-box input {
+
+.b-search-box input,.b-search-box  .st-ui-search-input, .b-search-box  .st-default-search-input {
+line-height:inherit;
+box-sizing:inherit;
+background-image:none;
+font-family:inherit;
 	display: none;
 	position: absolute;
 	top: -36px;
@@ -15223,7 +15228,6 @@ color: #00314c;
    color: #666;
 }
 /* Swipe type Customization */
-
 .st-ui-type-heading{
   font-size:1.1em !important;
   line-height:1.6em !important;
