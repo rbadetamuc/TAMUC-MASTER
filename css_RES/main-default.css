@@ -15241,14 +15241,15 @@ color: #00314c;
 	opacity:0.25,1;
 }
 .b-pridestories{
-	color: #ffffff;
-	background-color: #00304c;
+	color: #00304c;
+	background-color: #FFD000;
 	padding-bottom: 2px;
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-top: 2px;
-}.b-pridestories:hover{
-background-color:#666666;
+}
+.b-pridestories:hover{
+	color: #00304c;
 }
 @media screen and (max-width: 768px){
 .html-bg{
