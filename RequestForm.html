@@ -742,12 +742,18 @@ padding-left:0px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
-.form-label,.form-sub-label,.form-description{
+/* .form-label,.form-sub-label,.form-description{
 	height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;
+} */
+.form-label,.form-sub-label,.form-description{
+	display:none;
 }
-.form-label#label_19, .form-input#cid_19{
+/* .form-label#label_19, .form-input#cid_19{
 	display:table-cell;
 	height:auto; width:auto; position: inherit; overflow: inherit; top:inherit;
+} */
+#label_19.form-label, #cid_19.form-input {
+    display: table-cell;
 }
 .form-radio-item label, .form-checkbox-item label, .form-grading-label{
 	color:#fff;
