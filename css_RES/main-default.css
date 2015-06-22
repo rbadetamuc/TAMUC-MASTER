@@ -2919,12 +2919,7 @@ header {
 	position: relative;
 	z-index: 2;
 }
-
-.b-search-box input,.b-search-box  .st-ui-search-input, .b-search-box  .st-default-search-input {
-line-height:inherit;
-box-sizing:inherit;
-background-image:none;
-font-family:inherit;
+.b-search-box input {
 	display: none;
 	position: absolute;
 	top: -36px;
@@ -14729,6 +14724,7 @@ box-shadow: none;
 }
 .b-btn-primary:hover{
 background-color: #FFD000;
+color: #FFFFFF;
 }
 .b-info-container__text a{
 color:#fff;
@@ -15228,6 +15224,7 @@ color: #00314c;
    color: #666;
 }
 /* Swipe type Customization */
+
 .st-ui-type-heading{
   font-size:1.1em !important;
   line-height:1.6em !important;
@@ -15245,26 +15242,15 @@ color: #00314c;
 	opacity:0.25,1;
 }
 .b-pridestories{
-	color: #00304c;
-	background-color: #FFD000;
+	color: #233382;
+	background-color: rgb(255, 211, 0);
 	padding-bottom: 2px;
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-top: 2px;
 }
-.b-pridestories:hover{
-	color: #00304c;
-}
 @media screen and (max-width: 768px){
 .html-bg{
 background-image:none;
-}
-.Parentscroll{
-display:block;
-}
-}
-@media screen and (min-width: 768px){
-.Parentscroll{
-display:none;
 }
 }

@@ -65,7 +65,7 @@
 
 					keyboardNavigation:"on",
 
-					touchenabled:"off",						// Enable Swipe Function : on/off
+					touchenabled:"on",						// Enable Swipe Function : on/off
 					onHoverStop:"on",						// Stop Banner Timet at Hover on Slide on/off
 
 

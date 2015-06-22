@@ -1180,7 +1180,8 @@ website:   	http://www.themepunch.com
 }
 .tp-playToggle{
   bottom: 20px;
-  right:30px;
+  left:100%;
+  margin-left: -26px;
   cursor:pointer;
    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
    -moz-opacity: 0.8;
@@ -1196,7 +1197,6 @@ website:   	http://www.themepunch.com
  }
  .tp-playToggle .fa{
  color:#fff;
- font-size:2em;
  }
 .tp-bullets.simplebullets.navbar {
     border: 1px solid #666;
