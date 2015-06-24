@@ -120,7 +120,8 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
               <div class="b-top-nav__link visible-lg" ><a href="http://www.tamuc.edu/aboutUs/default.aspx">About Us</a></div>
               <div class="b-navlevel__block">
                 <ul class="b-top-nav__2level_wrap">
-                  <li class="b-top-nav__2level_title f-top-nav__2level_title"> <a href="http://www.tamuc.edu/aboutUs/theCampus/default.aspx">Main Campus</a></li>
+                  <li class="b-top-nav__2level_title f-top-nav__2level_title"> <a href="http://www.tamuc.edu/aboutUs/theCampus/default.aspx">Main Campus</a>
+				  </li>
                   <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="http://www.tamuc.edu/admissions/oneStopShop/undergraduateAdmissions/scheduleTour/default.aspx"><i class="fa fa-angle-right"></i>Visiting Campus</a></li>
                   <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="http://www.tamuc.edu/aboutUs/theCampus/directions/"><i class="fa fa-angle-right"></i>Directions To Campus</a></li>
                   <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="http://www.tamuc.edu/aboutus/thecampus/campusmap.pdf"><i class="fa fa-angle-right"></i>Campus Map</a></li>
@@ -412,14 +413,24 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
           </div>
           <div class="menu_container">
             <ul>
-              <li><a class="homeCurrent" href="/aboutUs/default.aspx">About Us</a>
-                <ul>
-                  <li><a href="">My Favorite</a></li>
-                  <li><a href="">Link 1</a></li>
-                </ul>
-              </li>
               <li><a href="/aboutUs/ourMission/default.aspx">Our Mission</a></li>
-              <li><a href="/aboutUs/theCampus/default.aspx">Our Campus</a></li>
+              <li><a href="#ourcampus" data-toggle="collapse" aria-expanded="false">Our Campus</a>
+			  <ul class="collapse" id="ourcampus" aria-expanded="true" >
+				<li><a href="">Directions & Address</a></li>
+				<li><a href="#campusmap" data-toggle="collapse" aria-expanded="false">Campus Map</a>
+				<ul class="collapse" id="campusmap" aria-expanded="true" >
+				<li><a href="">Directions & Address</a></li>
+				<li><a href="">Campus Map</a></li>
+				<li><a href="">Accessibility Map</a></li>
+				<li><a href="">Schedule a Tour</a></li>
+				<li><a href="">Off-site Locations</a></li>
+			  </ul>
+				</li>
+				<li><a href="">Accessibility Map</a></li>
+				<li><a href="">Schedule a Tour</a></li>
+				<li><a href="">Off-site Locations</a></li>
+			  </ul>
+			  </li>
               <li><a href="/aboutUs/historyTraditions/default.aspx">Our History &amp; Traditions</a></li>
               <li><a href="/aboutUs/ourStudents/default.aspx">Our Students</a></li>
               <li><a href="/aboutUs/ourFaculty/default.aspx">Our Faculty</a></li>
@@ -452,6 +463,12 @@ document.write('<iframe frameborder="0" height="1" src="http://4478838.fls.doubl
                   <div class="sidebarMainContentStyled">
 				  <!-- JotForm Start -->
 					<div id="requestForm" class="hidden"> </div>
+					<style type="text/css">
+						.form-all p, .form-all p * {
+						  font-size: 0.8em !important;
+						  color: #555 !important;
+						}
+					</style>
 				  <!-- Jot Form End -->
 				  </div>
                 </div>

@@ -12,6 +12,9 @@
 	margin-bottom:20px;
 	padding:0px;
 }
+.l-inner-page-container {
+  padding: 10px 0;
+}
 @media screen and (max-width: 767px) {
  .f-infoblock-with-icon__info_title {		
  font-size: 1.07692em;		
@@ -21,7 +24,10 @@
 	font-size: 1em;		
 }		
 }
-
+/* Sidebar */
+.b-accordion--smallindent .b-accordion__content {
+  padding: 0.5em;
+}
 /* Widget Nav */		
 .widget_nav_menu {		
 	position:relative;		
@@ -41,7 +47,7 @@
 	font-size: 0.6em;		
 	display: inline-block;		
 	position: relative;		
-	bottom: 3px;		
+	bottom: 3px;		  
 	left: 10px;		
 	color: #bce0f6;		
 	cursor: pointer;		
@@ -70,13 +76,13 @@
 	font-weight:900;		
 	color:#164080;		
 }		
-.widget_nav_menu .menu_container ul ul {		
-	margin-bottom:10px;		
-	border-left:1px solid #e0e0e0;		
+.widget_nav_menu .menu_container > ul > li  ul {		
+	border-left:1px solid #d6d6d6;		
 	padding-left:15px;		
-}		
+}
+
 .widget_nav_menu .menu_container ul ul li a {		
-	line-height:1.8em;		
+	line-height:2.4em;		
 	color:#888;		
 }		
 aside {		
@@ -110,18 +116,25 @@ margin:auto;
  padding:inherit;		
  box-shadow:none;		
 }		
-.widget_nav_menu .menu_container ul ul {		
- border-right:1px solid #e0e0e0;		
+.widget_nav_menu .menu_container > ul > li  ul {		
+ border-right:1px solid #d6d6d6;		
  padding-right:15px;		
  border-left:0px;		
  padding-left:0px;		
-}		
 }
 
+}
+
+/* No Background */
+.html-bg{
+background:none;
+}
 /* Request Form Customization */
 .form-line{
 width:100% !important;
 padding:0px !important;
+padding-top:6px !important;
+
 }
 .form-sub-label-container{
 display:block !important;
@@ -135,4 +148,12 @@ padding-top: 5px !important;
 }
 .form-all p, .form-all p *{
 color:#333333 !important;
+}
+.form-radio-item label, .form-checkbox-item label, .form-grading-label,#label_19.form-label, #cid_19.form-input,.form-multiple-column .form-radio-item, .form-multiple-column .form-checkbox-item{
+color:#555555 !important;
+display: inline !important; 
+width:auto !important;
+}
+.form-multiple-column .form-radio-item .form-checkbox, .form-multiple-column .form-checkbox-item .form-checkbox{
+margin:6px 0px 0px 3px;
 }
