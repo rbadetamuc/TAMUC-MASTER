@@ -1194,10 +1194,17 @@ website:   	http://www.themepunch.com
     opacity: 1;
  transition: opacity 1s;
  }
- .tp-playToggle .fa{
+.tp-playToggle .fa{
  color:#fff;
- font-size:2em;
- }
+ font-size:1.2em;
+}
+@media screen and (max-width: 767px) {
+.tp-playToggle .fa{
+ color:#fff;
+ font-size:1.6em;
+}
+}
+
 .tp-bullets.simplebullets.navbar {
     border: 1px solid #666;
     border-bottom: 1px solid #444;
