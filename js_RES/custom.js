@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 		});
 		if(slider){
 			$('.loadingrss').hide();
-			$('.b-carousel-primary__item').show();	
+			$('.b-carousel-primary__item').show();
 			$( "#requestForm" ).load( "RequestForm.html");
 		}
 		
@@ -46,13 +46,17 @@ jQuery(document).ready(function($) {
         scrollTop: $("#scrollObj").offset().top
     }, 2000);
 	
-
 });
 	$(".myLeoLink").hover(function(){
 		$(this).find('img').attr('src','img/myLEO-over.svg');
 	},function(){
 		$(this).find('img').attr('src','img/myLEO.svg');		
 	});
+		$(".widget_nav_title").on('click',function(){
+		if($(window).width() < BREAK.MD)
+			$(".widget_nav_menu .menu_container").slideToggle();
+		});		
+	
 });
 function checkSize(){
 	if ($(window).width() < BREAK.SM) {
@@ -70,3 +74,4 @@ function reloadScript(event)
     }
  
 }
+

@@ -96,7 +96,7 @@ body a:focus {
 abbr[title] {
 	border-bottom: 1px dotted;
 }
-b, strong {
+b, strong,.strong {
 	font-weight: 700;
 }
 dfn {
@@ -249,7 +249,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #fff;
+	color: #999999;
 	text-decoration: none;
 }
 .b-remaining {
@@ -3740,6 +3740,7 @@ margin-bottom: 6px;
  top: 100%;
  margin-top: 3px;
  margin-left: 0 !important;
+ padding-bottom:10px;
 }
 }
  @media screen and (min-width: 1025px) {
@@ -14927,6 +14928,9 @@ max-width:220px;
 u{
 text-decoration:none;
 }
+.uline{
+text-decoration:underline;
+}
 .tp-caption a:hover { 
 color:#edb111; 
 }
@@ -15268,3 +15272,4 @@ display:block;
 display:none;
 }
 }
+
