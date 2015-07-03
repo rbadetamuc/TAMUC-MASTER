@@ -1,6 +1,32 @@
 /* Add here all your JS customizations */
 jQuery(document).ready(function($) {
 	checkSize();
+	$("a.slide_Lbox").click(function() {
+	$.fancybox({
+			'padding'		: 0,
+			'aspectRatio'	:  true,
+			'width'			: "1280",
+			'height'		: "720",
+			'autoWidth'		: true,
+			'autoHeight'	: true,
+			'autoCenter'	: true,
+			'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'embed/'),
+			'wrapCSS'		: 'Lbox_video',
+			'type'			: 'iframe',
+			'swf'			: {
+			   	'preload'   : false
+
+			},
+			'afterLoad'		: function() {
+	    		$(".tp-playToggle .fa").trigger( "click" );
+			},
+			'afterClose'		: function() {
+	    		$(".tp-playToggle .fa").trigger( "click" );
+			},
+		});
+
+	return false;
+	});
 	$('.b-search-box .fa').click(function(){
 		var target = '.b-search-box #searchField';
 		$(target).toggle();
