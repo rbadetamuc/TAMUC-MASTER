@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="html-bg" lang="en-US">
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,7 @@
     <title>Texas A&amp;M University-Commerce</title>
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css_RES/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap css -->
     <link type="text/css" rel='stylesheet' href="css_RES/bootstrap.min.css">
     <link type="text/css" rel='stylesheet' href="js_RES/bootstrap-progressbar/bootstrap-progressbar-3.2.0.min.css">
@@ -26,6 +27,7 @@
     <!-- <link type="text/css" rel='stylesheet' href="js/jqueryui/jquery-ui.structure.css"> -->
     <!-- End Jquery UI css -->
     <link type="text/css" rel='stylesheet' href="fonts/fonts.css">
+    <link type="text/css" rel='stylesheet' href="css_RES/animate.css">
     <link type="text/css" data-themecolor="default" rel='stylesheet' href="css_RES/main-default.css">
     <script src="js_RES/jquery/jquery-1.11.1.min.js"></script>
     <script src="js_RES/modules/modernizr.js"></script>
@@ -80,4 +82,125 @@
     (window, document, 'script', 'dataLayer', 'GTM-KZSVSB');
     </script>
     <!-- End Google Tag Manager -->
+    <style type="text/css">
+    .b-logo {
+        margin-top: 24px;
+    }
+    
+    .b-content__f-block p {
+        margin-top: 24px;
+    }
+    
+    .arrow-circle {
+        font-size: 4em;
+        color: #ffffff;
+        transition: color 0.5s;
+        padding: 10px 27px 30px;
+        background-color: #feb82a;
+        line-height: normal;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        top: 50px;
+        z-index: 2;
+        box-shadow: 0px 2px 4px #8f6103;
+    }
+    
+    .arrow-circle {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 1s;
+    }
+    
+    .arrow-circle:hover {
+        color: #04304c !important;
+    }
+    
+    .b-big__head {
+        padding-bottom: 0px;
+    }
+    
+    .b-big__head h1 {
+        margin-top: 60px;
+        font-size: 10em;
+        font-weight: 900;
+    }
+    
+    .b-big__subhead {
+        font-size: 2em;
+    }
+    
+    .b-bg__yellow-block {
+        background-color: #eaa822;
+        padding: 0px;
+    }
+    
+    .b-img__lookup img {
+        max-width: 100%;
+    }
+    </style>
+    <script>
+    $(document).ready(function() {
+        // Handler for .ready() called.
+        $('html, body').animate({
+            scrollTop: $('#lookup__img').offset().top
+        }, 'slow');
+    });
+    </script>
 </head>
+
+<body class="b-bg-block-education">
+    <div class="container f-center">
+        <a href="http://www.tamuc.edu" class="b-logo "><img src="img/tamuc-logo.svg" alt="TAMUC LOGO" onerror="this.onerror=null; this.src='img/TAMUC-Logo.png'" class="color-theme" style="width:220px; height:auto"></a>
+    </div>
+    <section class="b-bg-block f-bg-block b-bg-block-education" id="b-lookup__content">
+        <div class="container f-center ">
+            <h1 class="f-secondary-b ">Get Started today.</h1>
+            <div class="b-bg-block__desc f-bg-block__desc f-secondary ">
+                <!--<u>Request Information </u>--></div>
+            <div class="b-content__f-block f-center">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div id="requestForm row" class="hidden ">
+                <!--  <script>
+                jQuery(document).ready(function($) {
+                    $('html, body').animate({
+                        scrollTop: $("#lookup__img").offset().top
+                    }, 2000);
+    
+                    $(window).load(function() {
+                        $("#requestForm").load("RequestForm.html");
+                    });
+                });
+                </script> -->
+            </div>
+        </div>
+    </section>
+    <section class="b-bg-block f-bg-block b-bg-block-education b-big__head">
+        <div class="container f-center ">
+            <h1 class="f-secondary-b fadeInUp animated">LOOK UP</h1>
+            <div class="b-bg-block__desc f-bg-block__desc f-secondary b-big__subhead fadeInUp animated">
+                <u>TO INFINITE POSSIBILITIES.</u>
+            </div>
+            <a href="" class="arrow-circle shake animated" id="lookup__action"> <i class="fa fa-chevron-up"></i></a>
+        </div>
+    </section>
+    <section class="b-primary f-bg-block b-bg__yellow-block" id="lookup__img">
+        <div class="container f-center b-img__lookup">
+            <img src="img/slider/slider-ed-2-small.jpg">
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <script src="js_RES/bootstrap.min.js "></script>
+    <script src="js_RES/scrollIt/scrollIt.min.js "></script>
+</body>
+
+</html>

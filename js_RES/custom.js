@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 			'wrapCSS'		: 'Lbox_video',
 			'type'			: 'iframe',
 			'swf'			: {
-			   	'preload'   : false
+			'preload'   : false
 
 			},
 			'afterLoad'		: function() {
@@ -24,7 +24,6 @@ jQuery(document).ready(function($) {
 	    		$(".tp-playToggle .fa").trigger( "click" );
 			},
 		});
-
 	return false;
 	});
 	$('.b-search-box .fa').click(function(){
