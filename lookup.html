@@ -93,7 +93,7 @@
     }
     
     .arrow-circle {
-        font-size: 3.6em;
+        font-size: 4em;
         color: #ffffff;
         transition: color 0.5s;
         padding: 10px 27px 30px;
@@ -109,7 +109,13 @@
     
     .arrow-circle {
         -webkit-animation-duration: 1s;
-        -webkit-animation-delay: 1s;
+        -webkit-animation-delay: 2.5s;
+        -moz-animation-duration: 1s;
+        -moz-animation-delay: 2.5s;
+        -opera-animation-duration: 1s;
+        -opera-animation-delay: 2.5s;
+        animation-duration: 1s;
+        animation-delay: 2.5s;
     }
     
     .arrow-circle:hover {
@@ -144,6 +150,21 @@
     .hidevisible{
         visibility: hidden;
     }
+    @media (max-width: 768px){
+        .b-big__head h1{
+            font-size:5em;
+        }
+        .b-big__subhead {
+            font-size:1.2em;
+        }
+        .arrow-circle {
+            font-size: 3em;
+            padding: 10px 20px 20px;
+        }
+        .b-img__lookup img{
+            max-width:70%;
+        }
+    }
     </style>
     <script>
     jQuery(document).ready(function($) {
@@ -174,7 +195,7 @@
     </div>
     <section class="b-bg-block f-bg-block b-bg-block-education " id="b-lookup__content">
         <div class="container f-center">
-            <h1 class="f-secondary-b">Get Started today.</h1>
+            <h1 class="f-secondary-b">Welcome</h1>
             <div class="b-bg-block__desc f-bg-block__desc f-secondary">
                 <!--<u>Request Information </u>--></div>
             <div class="b-content__f-block f-center">
@@ -183,13 +204,11 @@
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
-                    <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of"de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,"Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                    </p>
                 </div>
                 <div class="col-md-2"></div>
             </div>
             <div class="clearfix"></div>
+            <h1 class="f-secondary-b">Get Started today.</h1>
             <div id="requestForm" class="hidden">
             </div>
         </div>
@@ -203,12 +222,12 @@
             <a href="#b-lookup__content" class="arrow-circle shake animated lookup__action" id="lookup__action"> <i class="fa fa-chevron-up"></i></a>
         </div>
     </section>
-    <section class="b-primary f-bg-block b-bg__yellow-block" id="lookup__img">
+    <section class="b-primary f-bg-block b-bg__yellow-block" >
         <div class="container f-center b-img__lookup">
             <img src="img/slider/slider-ed-2-small.jpg">
         </div>
     </section>
-    <div class="clearfix"></div>
+    <div class="clearfix" id="lookup__img"> </div>
     <script src="js_RES/bootstrap.min.js"></script>
 </body>
 
