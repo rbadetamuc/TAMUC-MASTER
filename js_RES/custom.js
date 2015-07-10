@@ -1,7 +1,7 @@
 /* Add here all your JS customizations */
 jQuery(document).ready(function($) {
 	checkSize();
-	$("a.slide_Lbox").click(function() {
+	$(".slide_Lbox a").click(function() {
 	$.fancybox({
 			'padding'		: 0,
 			'aspectRatio'	:  true,
