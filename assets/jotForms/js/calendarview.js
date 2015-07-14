@@ -291,6 +291,9 @@ Calendar.setup = function(params)
     var triggerElement = $(params.triggerElement || params.dateField);
     var calendar = new Calendar();
     calendar.limits = params.limits;
+    if(calendar.limits) {
+      calendar.setDynamicLimits();
+    }
     calendar.setSelectHandler(params.selectHandler || Calendar.defaultSelectHandler);
     calendar.setCloseHandler(params.closeHandler || Calendar.defaultCloseHandler);
     calendar.startOnMonday = params.startOnMonday;
@@ -370,6 +373,37 @@ Calendar.prototype = {
     }
   },
 
+  setDynamicLimits: function() {
+
+    var getComparativeDate = function(dat) {
+      if(dat.indexOf('today') > -1) {
+        var comp = new Date();
+        var offset = parseInt(dat.split('today')[1]) || 0;
+        comp.setDate(comp.getDate() + offset);
+        var month = (comp.getMonth()+1) < 10 ? "0"+(comp.getMonth()+1):(comp.getMonth()+1);
+        return comp.getFullYear()+"-"+month+"-"+comp.getDate();
+      } else {
+        return dat;
+      }
+    }
+    var lim = this.limits
+    lim.start = getComparativeDate(lim.start);
+    lim.end = getComparativeDate(lim.end);
+    
+    if("custom" in lim && lim.custom !== false && Array.isArray(lim.custom)) {
+      for(var i=0; i<lim.custom.length; i++) {
+        lim.custom[i]= getComparativeDate(lim.custom[i]);
+      }
+    }
+    if("ranges" in lim && lim.ranges !== false && Array.isArray(lim.ranges)) {
+      for(var i=0; i<lim.ranges.length; i++) {
+        var range = lim.ranges[i].split(">");
+        start = getComparativeDate(range[0]);
+        end = getComparativeDate(range[1]);
+        lim.ranges[i] = start + ">" + end;
+      }
+    }
+  },
 
 
   //----------------------------------------------------------------------------
@@ -567,32 +601,35 @@ Calendar.prototype = {
       el.removeClassName("unselectable");
     }
 
-    if("future" in this.limits && this.limits.future === false) {
+    if(this.limits) {
 
-      if(selectedYear >= thisYear) {
-        unselectable(this.container.down(".nextYear"));
-      } else {
-        selectable(this.container.down(".nextYear"));
+      if("future" in this.limits && this.limits.future === false) {
+
+        if(selectedYear >= thisYear) {
+          unselectable(this.container.down(".nextYear"));
+        } else {
+          selectable(this.container.down(".nextYear"));
+        }
+
+        if(selectedYear >= thisYear && selectedMonth >= thisMonth) {
+          unselectable(this.container.down(".nextMonth"));
+        } else { 
+          selectable(this.container.down(".nextMonth"));
+        }
       }
 
-      if(selectedYear >= thisYear && selectedMonth >= thisMonth) {
-        unselectable(this.container.down(".nextMonth"));
-      } else { 
-        selectable(this.container.down(".nextMonth"));
-      }
-    }
+      if("past" in this.limits && this.limits.past === false) {
+        if(selectedYear <= thisYear) {
+          unselectable(this.container.down(".previousYear"));
+        } else {
+          selectable(this.container.down(".previousYear"));
+        }
 
-    if("past" in this.limits && this.limits.past === false) {
-      if(selectedYear <= thisYear) {
-        unselectable(this.container.down(".previousYear"));
-      } else {
-        selectable(this.container.down(".previousYear"));
-      }
-
-      if(selectedYear <= thisYear && selectedMonth <= thisMonth) {
-        unselectable(this.container.down(".previousMonth"));
-      } else { 
-        selectable(this.container.down(".previousMonth"));
+        if(selectedYear <= thisYear && selectedMonth <= thisMonth) {
+          unselectable(this.container.down(".previousMonth"));
+        } else { 
+          selectable(this.container.down(".previousMonth"));
+        }
       }
     }
   },

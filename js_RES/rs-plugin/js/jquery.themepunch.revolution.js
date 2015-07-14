@@ -5784,9 +5784,13 @@
                     }
                 }
             }, 100);
-
             var PlayBtn = container.find('.tp-playToggle .fa');
-            PlayBtn.click(pauseSlider);
+            $(PlayBtn).bind({
+                click: function(){
+                   pauseSlider();
+                }
+            });
+
 
             function pauseSlider() {
                 if (opt.onHoverStop == "on") {
@@ -5822,7 +5826,7 @@
                             dimg.data('kenburn').play();
                     });
                 }
-            }
+            } 
         }
     }
 
